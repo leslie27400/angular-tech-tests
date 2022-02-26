@@ -1,0 +1,8 @@
+www/
+coverage/
+dist/
+**/ios/**
+**/android/**
+**/environment.**.ts
+**.js
+src/app/services/api/**
