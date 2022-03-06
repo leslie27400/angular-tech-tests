@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: AppRoutes.ForgotPassword,
-    loadChildren: () => import("./pages/forgot-password/forgot-password.module").then(m => m.ForgotPasswordPageModule),
+    loadChildren: (): any => import("./pages/forgot-password/forgot-password.module").then(m => m.ForgotPasswordPageModule),
   },
   {
     path: AppRoutes.Home,
