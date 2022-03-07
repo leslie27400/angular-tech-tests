@@ -8,3 +8,9 @@
 - [ ] The button has to show a loading spinner while we are waiting for the api response
 - [ ] An API call to `https://httpin.org/get/?username=<USERNAME>` has to be done when the user click the reset password button
 - [ ] A success message has to be shown when the api call finishes
+
+### How can I send my response?
+- Fork this project
+- Checkout `test1` branch
+- Do your solution
+- Create a merge request from your fork at test1 to this project at test1
