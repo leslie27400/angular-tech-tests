@@ -10,6 +10,7 @@ import { effects, reducers, RootState } from "./store";
 import { HttpClientModule } from "@angular/common/http";
 import { localStorageSync } from "ngrx-store-localstorage";
 
+
 export const localStorageReduxSync = (reducer: ActionReducer<RootState>): ActionReducer<any> =>
   localStorageSync({ keys: [{ user: ["accessToken"] }], rehydrate: true })(reducer);
 

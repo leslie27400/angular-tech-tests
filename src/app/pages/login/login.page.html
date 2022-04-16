@@ -1,26 +1,48 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-grid>
+  <div class="primarybox">
+    <div class="box">
+      <img class="coara-img" src="./assets/icon/coara.png">
+    </div>
+  </div>
 
-<ion-content [formGroup]="form">
-  <ion-item>
-    <ion-label>Username</ion-label>
-    <ion-input formControlName="username"></ion-input>
-  </ion-item>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title  lines="none">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-item>
-    <ion-label>Password</ion-label>
-    <ion-input type="password" formControlName="password"></ion-input>
-  </ion-item>
+  <ion-content [formGroup]="form">
+    <ion-item class="input-item" lines="none">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
 
-  <ion-button [disabled]="form.invalid" (click)="login()">
-    <ion-spinner *ngIf="loading$|async; else text"></ion-spinner>
-    <ng-template #text><ion-text>Login</ion-text></ng-template>
-  </ion-button>
+    <ion-item lines="none">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div class="bottom">
+      <ion-item class="itemBottom" lines="none">
+        <div>
+        <ion-button class="btn-login" [disabled]="form.invalid" (click)="login()">
+          <ion-spinner *ngIf="loading$|async; else text"></ion-spinner>
+          <ng-template #text>
+            <img class="coara-img" src="./assets/icon/icon.svg">
+            <ion-text> Login</ion-text>
+          </ng-template>
+        </ion-button>
+      </div>
+      </ion-item>
+  
+    <ion-item class="itemBottom" lines="none">
+      <ion-button fill="clear" class="textforgot" [routerLink]="['/forgot-password']">Forgot your password?</ion-button>
+    </ion-item>
 
-  <ion-item lines="none">
-    <ion-button fill="clear" [routerLink]="['/forgot-password']">I forgot my password</ion-button>
-  </ion-item>
-</ion-content>
+    <ion-item  class="itemBottom" lines="none" >
+         <ion-text class="textBottom" > Be an early adopter</ion-text>
+    </ion-item>
+
+  </div>
+  </ion-content>
+
+</ion-grid>
